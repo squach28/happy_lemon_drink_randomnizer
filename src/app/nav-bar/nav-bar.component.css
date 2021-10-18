@@ -1,11 +1,14 @@
 .spacer {
     flex: 1 1 auto;
-  }
+}
 
   #navBar {
-      background-color: transparent;
-  }
+    background-color: #db854c;
+}
 
-  #navBar a {
-      text-decoration: none;
-  }
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
