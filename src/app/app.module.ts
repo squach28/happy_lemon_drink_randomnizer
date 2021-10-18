@@ -9,12 +9,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { RandomDrinkDialogComponent } from './random-drink-dialog/random-drink-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,    
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    RandomDrinkDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
     NoopAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

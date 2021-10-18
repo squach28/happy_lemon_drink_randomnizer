@@ -12,10 +12,8 @@ export class RandomDrinkService {
 
   private url: string = 'https://boiling-cliffs-76029.herokuapp.com/drinks/getRandomDrink';
 
-  getRandomDrink() {
-    this.http.get(this.url).subscribe((value) => {
-      console.log(value);
-    });
+  getRandomDrink(): Observable<any> {
+    return this.http.get(this.url);
   }
 
 
