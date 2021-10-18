@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RandomDrinkService } from '../random-drink.service';
 
 @Component({
   selector: 'home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private randomDrinkService: RandomDrinkService) { }
 
   ngOnInit(): void {
+  }
+
+  public getRandomDrink() {
+    console.log('clicked');
+    this.randomDrinkService.getRandomDrink();
   }
 
 }
