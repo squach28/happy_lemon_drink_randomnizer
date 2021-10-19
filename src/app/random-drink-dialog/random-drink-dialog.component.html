@@ -1,4 +1,16 @@
 <div class='center'>
+    <div class='spacing'>
     <img src={{imageUrl}} alt='uh oh :('>
     <h3>You got {{drinkName}}!!</h3>
+    </div>
+
+    <div class='spacing'>
+        <button *ngIf='!showTopping'(click)='toggleTopping()' mat-button>Give me a random topping</button>
+        <h4 *ngIf='showTopping'>Topping</h4>
+    </div>
+
+    <div class='spacing'>
+        <button *ngIf='!showSweetness' (click)='toggleSweetness()'mat-button>Give me a random sweetness</button>
+        <h4 *ngIf='showSweetness'>Sweetness</h4>
+    </div>
 </div>
