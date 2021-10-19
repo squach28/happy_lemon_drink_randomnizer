@@ -10,7 +10,7 @@ export class RandomDrinkService {
 
   constructor(private http: HttpClient) { }
 
-  private url: string = 'https://boiling-cliffs-76029.herokuapp.com/drinks/getRandomDrink';
+  private url: string = 'https://boiling-cliffs-76029.herokuapp.com/drink/getRandomDrink';
 
   getRandomDrink(): Observable<any> {
     return this.http.get(this.url);

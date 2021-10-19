@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RandomDrinkDialogComponent implements OnInit {
 
   public drinkName: string = '';
+  public imageUrl: string = '';
 
   constructor() { }
 

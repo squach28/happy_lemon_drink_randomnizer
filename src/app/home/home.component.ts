@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RandomDrinkService } from '../random-drink.service';
 import { RandomDrinkDialogComponent } from '../random-drink-dialog/random-drink-dialog.component';
-
+import { RandomImageService } from '../random-image.service';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
@@ -10,7 +10,7 @@ import { RandomDrinkDialogComponent } from '../random-drink-dialog/random-drink-
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private randomDrinkService: RandomDrinkService, public dialog: MatDialog) { }
+  constructor(private randomDrinkService: RandomDrinkService, private randomImageService: RandomImageService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -23,13 +23,17 @@ export class HomeComponent implements OnInit {
   public showDialog() {
     const drinkName = this.randomDrinkService.getRandomDrink().subscribe((value) => {
       console.log(value['value']);
-      const dialogRef = this.dialog.open(RandomDrinkDialogComponent);
-      dialogRef.componentInstance.drinkName = value['value'];
-   
-   
-       dialogRef.afterClosed().subscribe(result => {
-         console.log(`Dialog result: ${result}`);
-       });
+      const imageUrl = this.randomImageService.getRandomImage().subscribe((image) => {
+        const dialogRef = this.dialog.open(RandomDrinkDialogComponent);
+        dialogRef.componentInstance.drinkName = value['value'];
+        dialogRef.componentInstance.imageUrl = image['value'];
+     
+     
+         dialogRef.afterClosed().subscribe(result => {
+           console.log(`Dialog result: ${result}`);
+         });
+      });
+
     });
 
   }

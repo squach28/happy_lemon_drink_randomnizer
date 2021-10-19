@@ -2,13 +2,30 @@
     flex: 1 1 auto;
 }
 
+span {
+  margin: auto;
+  
+}
+
   #navBar {
     background-color: #db854c;
 }
 
 a {
+  display: flex;
     text-decoration: none;
     color: black;
+    height: 100%;
+    text-align: center;
+    
 }
+
+a:hover {
+    background-color: #572e13;
+
+  }
+  
+
+  
 
 
