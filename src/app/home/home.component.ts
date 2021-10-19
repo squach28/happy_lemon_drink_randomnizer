@@ -27,11 +27,7 @@ export class HomeComponent implements OnInit {
         const dialogRef = this.dialog.open(RandomDrinkDialogComponent);
         dialogRef.componentInstance.drinkName = value['value'];
         dialogRef.componentInstance.imageUrl = image['value'];
-     
-     
-         dialogRef.afterClosed().subscribe(result => {
-           console.log(`Dialog result: ${result}`);
-         });
+
       });
 
     });
