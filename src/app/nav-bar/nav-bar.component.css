@@ -12,7 +12,7 @@ span {
 }
 
 a {
-  display: flex;
+    display: flex;
     text-decoration: none;
     color: black;
     height: 100%;
@@ -23,7 +23,8 @@ a {
 a:hover {
     background-color: #572e13;
 
-  }
+}
+
   
 
   
