@@ -14,6 +14,7 @@ export class StoresComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLocations();
+    console.log(this.locations.length);
   }
 
   locations: any = [];

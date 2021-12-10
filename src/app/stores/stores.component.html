@@ -1,3 +1,7 @@
-<div id="listOfStores" >
+<div id="listOfStores" *ngIf="locations != null">
     <store-card *ngFor="let location of locations" [number]="location.number" [name]="location.name" [address]="location.address"></store-card>
+</div>
+
+<div id="spinnerContainer" *ngIf="locations.length === 0">
+    <mat-spinner></mat-spinner>
 </div>
