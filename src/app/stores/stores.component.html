@@ -1,1 +1,3 @@
-<p>Work in Progress :))</p>
+<div id="listOfStores" >
+    <store-card *ngFor="let location of locations" [number]="location.number" [name]="location.name" [address]="location.address"></store-card>
+</div>

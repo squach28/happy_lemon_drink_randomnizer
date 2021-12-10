@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationService } from '../location.service';
 
 @Component({
   selector: 'app-stores',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private locationService: LocationService) { 
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.getLocations();
+  }
+
+  locations: any = [];
+
+  public getLocations() {
+    this.locationService.getLocations().subscribe((value) => {
+      console.log(value);
+      this.locations = value;
+    });
+  }
 }

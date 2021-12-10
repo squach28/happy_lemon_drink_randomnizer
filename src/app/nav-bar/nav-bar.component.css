@@ -1,28 +1,44 @@
-.spacer {
-    flex: 1 1 auto;
+#navBar {
+  display: flex;
+  margin: 0;
+  border: 0;
+  background-color: #8f2007;
 }
+
+#navBarRow {
+  display: flex;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
 
 span {
-  margin: auto;
-  
+  display: flex;
+  align-self: center;
 }
 
-  #navBar {
-    background-color: #db854c;
-}
 
 a {
     display: flex;
     text-decoration: none;
-    color: black;
+    color: white;
     height: 100%;
     text-align: center;
-    
+    padding-left: 10px;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
 }
 
 a:hover {
-    background-color: #572e13;
+    background-color: #5f1504;
+}
 
+.navItem {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
   
