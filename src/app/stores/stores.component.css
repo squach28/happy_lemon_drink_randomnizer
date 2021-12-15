@@ -14,3 +14,10 @@ store-card {
     height: 100%;
     justify-content: center;
 }
+
+@media (max-width: 600px) {
+    #listOfStores {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

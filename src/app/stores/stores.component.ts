@@ -13,6 +13,7 @@ export class StoresComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.locations);
     this.getLocations();
     console.log(this.locations.length);
   }

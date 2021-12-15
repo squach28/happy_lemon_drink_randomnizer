@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+#navBarRow > #hamburgerIcon {
+  display: none;
+}
+
 
 span {
   display: flex;
@@ -41,7 +45,18 @@ a:hover {
   padding-right: 15px;
 }
 
-  
+@media (max-width: 600px) {
+  #navBarRow > a {
+    display: none;
+  }
+
+  #navBarRow > #hamburgerIcon {
+    display: flex;
+    color: white;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}  
 
   
 

@@ -1,4 +1,4 @@
-<div id="listOfStores" *ngIf="locations != null">
+<div id="listOfStores" *ngIf="locations.length != 0">
     <store-card *ngFor="let location of locations" [number]="location.number" [name]="location.name" [address]="location.address"></store-card>
 </div>
 
