@@ -8,6 +8,10 @@ import { LocationService } from '../location.service';
 })
 export class StoresComponent implements OnInit {
 
+  mapOptions = {
+    center: {lat: 37.372040, lng: -121.848836}
+  };
+
   constructor(private locationService: LocationService) { 
 
   }

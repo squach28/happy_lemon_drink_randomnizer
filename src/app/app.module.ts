@@ -16,6 +16,7 @@ import { StoresComponent } from './stores/stores.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatProgressSpinnerModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

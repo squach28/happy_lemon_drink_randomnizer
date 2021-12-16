@@ -21,3 +21,15 @@ store-card {
         grid-template-columns: 1fr;
     }
 }
+
+#map {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+google-map {
+    border: 1px solid black;
+}

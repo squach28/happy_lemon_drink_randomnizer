@@ -1,3 +1,7 @@
+<div id="map">
+    <google-map height="500px" width="500px" [options]="mapOptions"></google-map>
+</div>
+
 <div id="listOfStores" *ngIf="locations.length != 0">
     <store-card *ngFor="let location of locations" [number]="location.number" [name]="location.name" [address]="location.address"></store-card>
 </div>
